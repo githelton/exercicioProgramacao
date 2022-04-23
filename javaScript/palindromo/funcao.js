@@ -1,19 +1,15 @@
 const verificaPalindromo = (string) => {
-    let tamanhoString = string.length;
-    const quebraString = string.split('');
-    const inverteString = string.split('').reverse();
-    //const arrayStringQuebrada = quebraString;
-    //arrayStringQuebrada = [quebraString];
-    for (let str of quebraString){
-        let letra = str;
-        console.log(letra);
+    const tamanhoString = string.length;
+    const quebraString = string.toLowerCase().split('');
+    const inverteString = string.toLowerCase().split('').reverse();
+    const result = [];
+    for (let i = 0 ; i < tamanhoString; i++){
+        if(quebraString[i] === inverteString[i]){
+            return result[i] = quebraString;
+        }else{
+            return false;
+        }
     }
-    //console.log(arrayStringQuebrada);
-    //let frente = [];
-    //console.log(quebraString);
-    //console.log(palavraInvertida);
-    const verificaPalavra = (quebraString == inverteString) ? console.log(`É palindromo: ${quebraString}`) : console.log(`Não é palindromo: ${inverteString} é diferente de ${quebraString}`); 
-    return verificaPalavra;
 }
 
 export default verificaPalindromo;
