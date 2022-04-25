@@ -1,4 +1,4 @@
-const verificaPalindromo = (string) => {
+export const verificaPalindromo = (string) => {
     const tamanhoString = string.length;
     const quebraString = string.toLowerCase().split('');
     const inverteString = string.toLowerCase().split('').reverse();
@@ -11,5 +11,10 @@ const verificaPalindromo = (string) => {
         }
     }
 }
-
-export default verificaPalindromo;
+export const imprimeResultado = (resultado) => {
+    if(resultado == false){
+        console.log('O resultado não é um Palindromo');
+    }else{
+        console.log('O Palindromo é: ' + resultado.join(''));
+    }  
+}
