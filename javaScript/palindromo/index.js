@@ -1,5 +1,6 @@
+import entradasDados from 'readline-sync';
 import {verificaPalindromo, imprimeResultado} from './funcao.js'
 
-let nome = 'Ana';
+let nome = entradasDados.question('Digite sua Palavra: ');
 let resultado = verificaPalindromo(nome);
 imprimeResultado(resultado);
