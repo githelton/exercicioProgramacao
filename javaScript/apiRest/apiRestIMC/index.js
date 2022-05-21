@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const calculadoraIMC = require('./calculadoraIMC');
+const statusIMC = require('./calculadoraIMC');
 
 app.get('/', (req, res) => {
     console.log(req.query);
