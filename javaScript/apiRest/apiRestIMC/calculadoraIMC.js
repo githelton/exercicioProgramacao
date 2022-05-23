@@ -3,17 +3,18 @@ const calculadoraIMC = (peso, altura) =>{
     return imc;
 };
 const statusIMC = (imc) => {
-    let status = '';
+    let status;
 
-    if (imc <= 20){
-        status = {status: 'A baixo do Peso'};
-    }else if (imc > 21 && imc <= 24){
-        status = {status = 'Na medida do Peso'};
-    }else if (imc > 24 && imc <= 26){
-        status = {status: 'Acima do Peso'};
+    if (imc < 18){
+        status = 'A baixo do Peso';
+    }else if (imc >= 18 && imc < 24.9){
+        status = 'Na medida do Peso';
+    }else if (imc >= 24.9 && imc <= 27.9){
+        status = 'Acima do Peso';
     }else{
-        status = {status: 'Obeso'};
+        status = 'Obeso';
     }
+    return status;
 };
 
 exports.calculadoraIMC = calculadoraIMC;

@@ -8,7 +8,8 @@ app.get('/', (req, res) => {
     let peso = req.query.peso;
     let altura = req.query.altura;
     let imc = calculadoraIMC.calculadoraIMC(peso, altura);
-    res.json({imc: imc});
+    let status = calculadoraIMC.statusIMC(imc);
+    res.json({imc: imc, status: status});
 });
 app.listen(8080, () => {
     console.log('servidor ligado!');
